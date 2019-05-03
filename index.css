@@ -1,0 +1,16 @@
+img{
+    height: 200px;
+    weight:200px;
+}
+
+.choose{
+    background-color: aqua;
+    border-radius:20px;
+    width: 100px;
+    text-align: center;
+}
+
+.choose:hover{
+    background-color: black;
+    color:white;
+}

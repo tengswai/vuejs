@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link href="./index.css" type="text/css" rel="stylesheet">
+    <title>Vue Js</title>
+</head>
+<body>
+    <div id = "swaii">
+        <h1>{{travel}}</h1>
+        <div class = 'placeImage'>
+            <img v-bind:src="image" v-bind:alt="alt">
+            <br>
+            country:
+            <p v-if="isMas">Malaysia</p>
+            <p v-else>Australia</p>
+            food:
+            <ul>
+                <li v-for="detail in food">
+                    {{detail}}
+                </li>
+            </ul>
+            <div v-for="DiffCountry in country" :key="DiffCountry.countryId">
+                <p class="choose" @mouseover="changePlace(DiffCountry.placeImage,DiffCountry.countryFood,DiffCountry.isMas)">{{DiffCountry.countryPlace}}</p>
+            </div>
+        </div>
+        <button v-on:click="addLove">LOVE</button>
+        <p>LOVE({{love}})</p>
+    </div>
+</body>
+<script src='index.js'></script>
+</html>
